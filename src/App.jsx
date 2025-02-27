@@ -4,13 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Dashboard from './Components/Dashboard'
 import Navbar from './Components/Navbar'
+import Todos from './Components/Todos'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar/>
+      <Todos />
     </>
   )
 }

@@ -4,7 +4,7 @@ const Navbar = () => {
    
   return (
     <>
-        <div className='flex bg-black text-white justify-between px-20 py-5 f'>
+        <div className='flex text-[#f69149] font-semibold justify-between md:px-20 md:py-5 px-5 py-3.5'>
             <h1>=</h1>
             <h1>Todo App</h1>
             <h1>account</h1>
