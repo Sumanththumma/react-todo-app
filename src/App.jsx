@@ -8,6 +8,7 @@ function App() {
       <h1 className='text-lg text-white'>Wassup!</h1>
     </>
   )
+  
 }
 
 export default App
