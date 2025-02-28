@@ -43,10 +43,9 @@ const Todo = () => {
       })
     })
   }
-
-  useEffect((
-    
-  )=>{},[todoList])
+  useEffect(()=>{
+    console.log(todoList);
+  },[todoList])
 
 
   return (
@@ -74,7 +73,7 @@ const Todo = () => {
         <div>
 
             {todoList.map((item,index)=>{
-              return <Todoitems deleteTodo={deleteTodo} key={index} text={item.text} id={item.id} isComplete={item.isComplete} />
+              return <Todoitems toggle={toggle} deleteTodo={deleteTodo} key={index} text={item.text} id={item.id} isComplete={item.isComplete} />
             })}
         </div>
 
