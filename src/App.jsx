@@ -1,16 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Dashboard from './Components/Dashboard'
-import Navbar from './Components/Navbar'
-import Todos from './Components/Todos'
+import Todo from './Components/Todo'
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Todos />
+      <div className='bg-neutral-800 h-screen w-full'>
+        <Todo />
+      </div>
     </>
   )
 }
