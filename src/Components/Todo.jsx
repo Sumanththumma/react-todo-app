@@ -4,7 +4,7 @@ import Todoitems from './Todoitems'
 const Todo = () => {
 
   const inputRef = useRef();
-  const [todoList,setTodoList] = useState([]);
+  const [todoList,setTodoList] = useState(localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : []);
 
   const add = () => {
 
@@ -28,13 +28,13 @@ const Todo = () => {
   }
 
   const deleteTodo = (id) =>{
-    setTodoList((prevTodos)=>{
-      return prevTodos.filter((todo) => todo.id !== id)
+    setTodoList((prvTodos)=>{
+      return prvTodos.filter((todo) => todo.id !== id)
     })
   }
 
   const toggle =(id)=>{
-    setTodoList((prev)=>{
+    setTodoList((prevTodos)=>{
       return prevTodos.map((todo)=>{
         if(todo.id === id){
           return {...todo, isComplete: !todo.isComplete}
@@ -44,7 +44,7 @@ const Todo = () => {
     })
   }
   useEffect(()=>{
-    console.log(todoList);
+    localStorage.setItem('todos',JSON.stringify(todoList));
   },[todoList])
 
 
